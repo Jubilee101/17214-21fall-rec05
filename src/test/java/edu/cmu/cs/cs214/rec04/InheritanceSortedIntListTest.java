@@ -50,6 +50,8 @@ public class InheritanceSortedIntListTest {
        @Test
        public void testAddAll() {
        // add 5 elements to our first list.
+              // super call this.add to add all,
+              // 'this' points to child class instead of super
        list1.add(1);
        list1.add(3);
        list1.add(2);

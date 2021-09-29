@@ -12,7 +12,14 @@ package edu.cmu.cs.cs214.rec04;
 public class InheritanceSortedIntList extends SortedIntList {
     // the number of attempted element insertions
     private int totalAdded;
-
+    public boolean add(int num){
+        totalAdded ++;
+        return super.add(num);
+    }
+    public boolean addAll(IntegerList list){
+        totalAdded += list.size();
+        return  super.addAll(list);
+    }
     /**
      * Gets the total number of attempted int insertions to the list since it
      * was created.
